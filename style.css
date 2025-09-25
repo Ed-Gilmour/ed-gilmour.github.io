@@ -8,12 +8,6 @@ body {
   text-align: center;
 }
 
-footer {
-  background: #3a3a3a;
-  color: #ddd;
-  padding: 1rem;
-}
-
 .tabs {
   position: absolute;
   display: flex;
@@ -43,4 +37,45 @@ footer {
   text-decoration-color: rgb(220, 220, 220);
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 60px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a3a3a;
+  color: rgb(200, 200, 200);
+  box-sizing: border-box;
+}
+
+.footer-left {
+  white-space: nowrap;
+}
+
+.footer-right {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.footer-tab {
+  flex-shrink: 0;
+  color: rgb(140, 140, 140);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.footer-tab:hover {
+  flex-shrink: 0;
+  color: rgb(240, 240, 240);
 }

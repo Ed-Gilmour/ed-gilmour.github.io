@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="tabs">
-    <button data-tab="about" class="tab-button active">About Me</button>
+    <button data-tab="about" class="tab-button active">About</button>
     <button data-tab="projects" class="tab-button">Projects</button>
     <button data-tab="resume" class="tab-button">Resume</button>
     <button data-tab="contact" class="tab-button">Contact</button>
@@ -40,18 +40,29 @@
   </div>
 
   <footer>
-    <p>© 2025 Ed Gilmour</p>
+    <div class="footer-left">
+      <p>© 2025 Edward Gilmour</p>
+    </div>
+    <div class="footer-right">
+      <p>
+        <button class="footer-tab" data-tab="about">About</button> | 
+        <button class="footer-tab" data-tab="projects">Projects</button> | 
+        <button class="footer-tab" data-tab="resume">Resume</button> | 
+        <button class="footer-tab" data-tab="contact">Contact</button>
+      </p>
+    </div>
   </footer>
 
   <script>
-    const buttons = document.querySelectorAll('.tabs button');
+    const buttons = document.querySelectorAll('.tabs button, .footer-right button');
     const contents = document.querySelectorAll('.tab-content');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove("active"))
+        const top_button = document.querySelector(`.tab-button[data-tab="${btn.dataset.tab}"]`);
+        buttons.forEach(b => b.classList.remove("active"));
         contents.forEach(c => c.style.display = 'none');
-        btn.classList.add('active');
+        top_button.classList.add('active');
         document.getElementById(btn.dataset.tab).style.display = 'block';
       });
     });

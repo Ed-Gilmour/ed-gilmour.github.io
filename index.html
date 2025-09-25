@@ -7,33 +7,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Ed Gilmour</h1>
-    <p>Game Programmer and Designer | Unity | C#</p>
-  </header>
+  <div class="tabs">
+    <button data-tab="about" class="tab-button active">About Me</button>
+    <button data-tab="projects" class="tab-button">Projects</button>
+    <button data-tab="resume" class="tab-button">Resume</button>
+    <button data-tab="contact" class="tab-button">Contact</button>
+  </div>
 
-  <section id="games">
-    <h2>My Games</h2>
-    <div class="game-grid">
-      <div class="game">
-        <img src="images/game1.jpg" alt="Game 1 screenshot">
-        <h3>Game Title</h3>
-        <p>Short description of the game.</p>
-        <a href="https://store.steampowered.com/app/...">View on Steam</a>
-      </div>
-    </div>
-  </section>
+  <div id="about" class="tab-content">
+    <header>
+      <h1>Hi, I'm Ed Gilmour</h1>
+      <p>Game Programmer and Designer | Unity | C#</p>
+    </header>
+  </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Short bio here, maybe mention solo vs team projects.</p>
-  </section>
+  <div id="projects" class="tab-content" style="display:none">
+    <header>
+      <h1>Projects</h1>
+    </header>
+  </div>
+
+  <div id="resume" class="tab-content" style="display:none">
+    <header>
+      <h1>Resume</h1>
+    </header>
+  </div>
+
+  <div id="contact" class="tab-content" style="display:none">
+    <header>
+      <h1>Contact</h1>
+    </header>
+  </div>
 
   <footer>
-    <p>© 2025 Your Name</p>
-    <a href="Resume.pdf" download>Download Resume</a>
-    <a href="https://github.com/yourusername">GitHub</a>
-    <a href="https://www.linkedin.com/in/yourprofile/">LinkedIn</a>
+    <p>© 2025 Ed Gilmour</p>
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tabs button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove("active"))
+        contents.forEach(c => c.style.display = 'none');
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).style.display = 'block';
+      });
+    });
+  </script>
 </body>
 </html>

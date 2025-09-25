@@ -1,7 +1,7 @@
 body {
   background-color: #45454f;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -17,16 +17,16 @@ footer {
 .tabs {
   position: absolute;
   display: flex;
-  top: 40px;
-  right: 40px;
+  top: 30px;
+  right: 120px;
   gap: 10px;
 }
 
 .tab-button {
   color: rgb(120, 120, 120);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 12px;
   background: none;
   border: none;
   cursor: pointer;

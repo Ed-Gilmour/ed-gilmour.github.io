@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+.game-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.game {
+  max-width: 250px;
+}
+
+.game img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 1rem;
+}
+footer a {
+  margin: 0 0.5rem;
+  color: #ddd;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}

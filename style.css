@@ -12,7 +12,7 @@ body {
   position: absolute;
   display: flex;
   top: 30px;
-  right: 120px;
+  right: 200px;
   gap: 10px;
 }
 
@@ -37,6 +37,19 @@ body {
   text-decoration-color: rgb(220, 220, 220);
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
+}
+
+.section-main-box {
+  padding: 120px 200px;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.section-body {
+  text-align: left;
 }
 
 footer {

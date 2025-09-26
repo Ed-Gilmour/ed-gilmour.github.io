@@ -76,15 +76,10 @@
         if (target == current) return;
 
         current.classList.remove("active");
-        current.addEventListener("transitionend", function out_handler() {
-          current.style.display = "none";
-          target.style.display = "block"
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              target.classList.add("active")
-            })
-          });
-          current.removeEventListener("transitionend", out_handler);
+        current.style.display = "none";
+        target.style.display = "block";
+        requestAnimationFrame(() => {
+            target.classList.add("active");
         });
 
         buttons.forEach(b => b.classList.remove("active"));

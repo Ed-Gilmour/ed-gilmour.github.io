@@ -14,7 +14,7 @@
     <button data-tab="contact" class="tab-button">Contact</button>
   </div>
 
-  <div id="about" class="tab-content section-main-box">
+  <div id="about" class="tab-content section-main-box active" style="display:block">
     <h1 class="section-header">
       Hi, I'm Ed Gilmour
     </h1>
@@ -70,11 +70,27 @@
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const top_button = document.querySelector(`.tab-button[data-tab="${btn.dataset.tab}"]`);
+        const target = document.getElementById(btn.dataset.tab);
+        const current = document.querySelector(".tab-content.active");
+
+        if (target == current) return;
+
+        current.classList.remove("active");
+        current.addEventListener("transitionend", function out_handler() {
+          current.style.display = "none";
+          target.style.display = "block"
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              target.classList.add("active")
+            })
+          });
+          current.removeEventListener("transitionend", out_handler);
+        });
+
         buttons.forEach(b => b.classList.remove("active"));
-        contents.forEach(c => c.style.display = 'none');
-        top_button.classList.add('active');
-        document.getElementById(btn.dataset.tab).style.display = 'block';
+
+        const top_button = document.querySelector(`.tab-button[data-tab="${btn.dataset.tab}"]`);
+        top_button.classList.add("active");
       });
     });
   </script>

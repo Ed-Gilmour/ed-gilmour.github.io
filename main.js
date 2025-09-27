@@ -1,12 +1,8 @@
 class ProjectCreator
 {
-  constructor(containerId)
+  static createProject(title, description, size, hue, white)
   {
-    this.container = document.getElementById(containerId);
-  }
-
-  createProject(title, description, size, hue, white)
-  {
+    const container = document.getElementById(`${size}-projects`);
     const project = document.createElement("div");
     project.classList.add("project");
     project.classList.add(`project-${size}`);
@@ -17,16 +13,16 @@ class ProjectCreator
       <div class="card-body"><p>${description}</p></div>
     `;
 
-    this.container.appendChild(project);
+    container.appendChild(project);
   }
 }
 
-const creator = new ProjectCreator("projects");
-creator.createProject("Cosmula", "This is a description of Cosmula.", "large", 206, 30);
-creator.createProject("Fried Panic", "This is a description of Fried Panic.", "large", 13, 50);
-creator.createProject("Mineral Mayhem", "This is a description of Mineral Mayhem.", "medium", 50, 30);
-creator.createProject("Lincoln's Path", "This is a description of Lincoln's Path.", "medium", 30, 50);
-creator.createProject("Dark Dash", "This is a description of Dark Dash.", "small", 283, 30);
+ProjectCreator.createProject("Cosmula", "This is a description of Cosmula.", "large", 206, 30);
+ProjectCreator.createProject("Fried Panic", "This is a description of Fried Panic.", "large", 13, 50);
+ProjectCreator.createProject("Mineral Mayhem", "This is a description of Mineral Mayhem.", "medium", 50, 30);
+ProjectCreator.createProject("Lincoln's Path", "This is a description of Lincoln's Path.", "medium", 30, 50);
+ProjectCreator.createProject("Dark Dash", "This is a description of Dark Dash.", "small", 283, 30);
+ProjectCreator.createProject("Portfolio", "This is a description of portfolio.", "small", 240, 50);
 
 const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');
 const contents = document.querySelectorAll('.tab-content');

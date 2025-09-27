@@ -22,7 +22,7 @@ ProjectCreator.createProject("Fried Panic", "This is a description of Fried Pani
 ProjectCreator.createProject("Mineral Mayhem", "This is a description of Mineral Mayhem.", "medium", 50, 30);
 ProjectCreator.createProject("Lincoln's Path", "This is a description of Lincoln's Path.", "medium", 30, 50);
 ProjectCreator.createProject("Dark Dash", "This is a description of Dark Dash.", "small", 283, 30);
-ProjectCreator.createProject("Portfolio", "This is a description of portfolio.", "small", 240, 50);
+ProjectCreator.createProject("Portfolio?", "This is a description of portfolio.", "small", 240, 50);
 
 const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');
 const contents = document.querySelectorAll('.tab-content');

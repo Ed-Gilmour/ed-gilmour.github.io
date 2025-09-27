@@ -34,12 +34,6 @@
     <p class="section-body">
       Here are some of the games I've created and published, from featured releases to game jams and educational projects.
     </p>
-    <div class="card">
-      <h2 class="card__header">Cosmula (2025)</h2>
-      <div class="card__body">
-        <p>Short description, tags, buttons, etc.</p>
-      </div>
-    </div>
   </div>
 
   <div id="resume" class="tab-content section-main-box" style="display:none">
@@ -73,31 +67,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');
-    const contents = document.querySelectorAll('.tab-content');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = document.getElementById(btn.dataset.tab);
-        const current = document.querySelector(".tab-content.active");
-
-        if (target == current) return;
-
-        current.classList.remove("active");
-        current.style.display = "none";
-        target.style.display = "block";
-        requestAnimationFrame(() => {
-            target.classList.add("active");
-        });
-
-        buttons.forEach(b => b.classList.remove("active"));
-
-        const top_button = document.querySelector(`.tab-button[data-tab="${btn.dataset.tab}"]`);
-        top_button.classList.add("active");
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

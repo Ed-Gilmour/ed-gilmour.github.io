@@ -11,7 +11,7 @@ class ProjectCreator
     let imagesStr = ""
     for (let i = 0; i < images.length; i++)
     {
-      imagesStr += `<img src="Project Images/Cosmula/${images[i]}" alt="${imageTitles[i]}" class="card-image"></img>`
+      imagesStr += `<img src="Project Images/${title.replace(/'/g, "")}/${images[i]}" alt="${imageTitles[i]}" class="card-image"></img>`
     }
 
     project.innerHTML = `

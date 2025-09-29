@@ -18,7 +18,7 @@ class ProjectCreator
       <h2 class="card-header" style="background-color: hwb(${hue} ${white} 20%);">${title}</h2>
       <div class="card-body">
         <div class="project-images-${size} project-images">${imagesStr}</div>
-        <p class="project-text-${size}">${description}</p>
+        <p class="project-text">${description}</p>
       </div>
     `;
 

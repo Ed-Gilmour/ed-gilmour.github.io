@@ -36,26 +36,26 @@ ProjectCreator.createProject(
 ProjectCreator.createProject(
   "Fried Panic",
   `This is a description of Fried Panic.`,
-  ["Cosmula Screenshot 1.png", "Cosmula Screenshot 1.png", "Cosmula Screenshot 1.png", "Cosmula Screenshot 1.png"],
-  ["GIF 1", "GIF 2", "GIF 3", "GIF 4"],
+  ["Fried Panic Screenshot 1.png", "Fried Panic Screenshot 1.png", "Fried Panic Screenshot 2.png", "Fried Panic Screenshot 3.png"],
+  ["Fried Panic GIF", "Fried Panic Screenshot 1", "Fried Panic Screenshot 2", "Fried Panic Screenshot 3"],
   "large", 13, 50);
 ProjectCreator.createProject(
   "Mineral Mayhem",
   `This is a description of Mineral Mayhem.`,
-  ["Cosmula Screenshot 1.png", "Cosmula Screenshot 1.png"],
-  ["GIF 1", "GIF 2"],
+  ["Mineral Mayhem Screenshot 1.png", "Mineral Mayhem Screenshot 1.png"],
+  ["Mineral Mayhem GIF", "Mineral Mayhem Screenshot 1"],
   "medium", 50, 30);
 ProjectCreator.createProject(
   "Lincoln's Path",
   `This is a description of Lincoln's Path.`,
-  ["Cosmula Screenshot 1.png", "Cosmula Screenshot 1.png"],
-  ["GIF 1", "GIF 2"],
+  ["Lincolns Path Screenshot 1.png", "Lincolns Path Screenshot 1.png"],
+  ["Lincoln's Path GIF", "Lincoln's Path Screenshot 1"],
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
   `This is a description of Dark Dash.`,
   ["Cosmula Screenshot 1.png"],
-  ["GIF 1"],
+  ["Dark Dash GIF"],
   "small", 283, 30);
 
 const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');

@@ -108,10 +108,8 @@ main {
 }
 
 .art-projects img {
-  width: auto;
-  height: auto;
-  max-width: 596px;
-  max-height: 450px;
+  width: 596px;
+  height: 450px;
   border-radius: 6px;
 }
 

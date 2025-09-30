@@ -97,6 +97,24 @@ main {
   color: rgb(240, 240, 240);
 }
 
+.art-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 1200px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.art-projects img {
+  width: auto;
+  height: auto;
+  max-width: 596px;
+  max-height: 450px;
+  border-radius: 6px;
+}
+
 .project {
   border-radius: 18px 18px 14px 14px;
   margin-bottom: 16px;
@@ -208,7 +226,7 @@ footer {
   color: rgb(240, 240, 240);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   .section-main-box {
     padding: 80px 16px;
   }

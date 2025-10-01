@@ -73,13 +73,13 @@ main {
 
 .section-header {
   text-align: left;
-  width: 830px;
+  width: 850px;
   margin-bottom: 40px;
 }
 
 .section-body {
   text-align: left;
-  width: 830px;
+  width: 850px;
 }
 
 .text-clickable {
@@ -89,6 +89,7 @@ main {
   text-decoration: none;
   color: rgb(140, 140, 140);
   font-size: 16px;
+  line-height: 1.6;
   background: none;
   border: none;
   cursor: pointer;

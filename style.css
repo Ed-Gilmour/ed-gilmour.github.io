@@ -226,7 +226,7 @@ footer {
   color: rgb(240, 240, 240);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 768px) {
   .section-main-box {
     padding: 80px 16px;
   }
@@ -241,6 +241,19 @@ footer {
   .tab-button {
     font-size: 16px;
     padding: 8px;
+  }
+
+  .art-projects {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .art-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
   }
 
   .project-large,

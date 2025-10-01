@@ -66,13 +66,20 @@ main {
   padding: 120px 120px;
 }
 
+.scroll-container {
+  overflow-x: auto;
+  padding-right: 120px;
+}
+
 .section-header {
   text-align: left;
+  width: 1200px;
   margin-bottom: 40px;
 }
 
 .section-body {
   text-align: left;
+  width: 1200px;
 }
 
 .text-clickable {
@@ -226,7 +233,7 @@ footer {
   color: rgb(240, 240, 240);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .section-main-box {
     padding: 80px 16px;
   }

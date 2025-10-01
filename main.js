@@ -11,7 +11,14 @@ class ProjectCreator
     let imagesStr = ""
     for (let i = 0; i < images.length; i++)
     {
-      imagesStr += `<img src="Project Images/${title.replace(/'/g, "")}/${images[i]}" alt="${imageTitles[i]}" class="card-image">`
+      if (imageTitles[i] != null)
+      {
+        imagesStr += `<img src="Project Images/${title.replace(/'/g, "")}/${images[i]}" alt="${imageTitles[i]}" class="card-image"></img>`;
+      }
+      else
+      {
+        imagesStr += `<video src="Project Images/${title.replace(/'/g, "")}/${images[i]}" autoplay loop muted playsinline class="card-image"></video>`;
+      }
     }
 
     project.innerHTML = `
@@ -30,32 +37,32 @@ ProjectCreator.createProject(
   "Cosmula",
   `This is a description of Cosmula.<br>
   Here is a new line.`,
-  ["Cosmula GIF.gif", "Cosmula Screenshot 1.png", "Cosmula Screenshot 2.png", "Cosmula Screenshot 3.png"],
-  ["Cosmula Gif", "Cosmula Screenshot 1", "Cosmula Screenshot 2", "Cosmula Screenshot 3"],
+  ["Cosmula Video.mp4", "Cosmula Screenshot 1.png", "Cosmula Screenshot 2.png", "Cosmula Screenshot 3.png"],
+  [null, "Cosmula Screenshot 1", "Cosmula Screenshot 2", "Cosmula Screenshot 3"],
   "large", 206, 30);
 ProjectCreator.createProject(
   "Fried Panic",
   `This is a description of Fried Panic.`,
-  ["Fried Panic GIF.gif", "Fried Panic Screenshot 1.png", "Fried Panic Screenshot 2.png", "Fried Panic Screenshot 3.png"],
-  ["Fried Panic GIF", "Fried Panic Screenshot 1", "Fried Panic Screenshot 2", "Fried Panic Screenshot 3"],
+  ["Fried Panic Video.mp4", "Fried Panic Screenshot 1.png", "Fried Panic Screenshot 2.png", "Fried Panic Screenshot 3.png"],
+  [null, "Fried Panic Screenshot 1", "Fried Panic Screenshot 2", "Fried Panic Screenshot 3"],
   "large", 13, 50);
 ProjectCreator.createProject(
   "Mineral Mayhem",
   `This is a description of Mineral Mayhem.`,
-  ["Mineral Mayhem GIF.gif", "Mineral Mayhem Screenshot 1.png"],
-  ["Mineral Mayhem GIF", "Mineral Mayhem Screenshot 1"],
+  ["Mineral Mayhem Video.mp4", "Mineral Mayhem Screenshot 1.png"],
+  [null, "Mineral Mayhem Screenshot 1"],
   "medium", 50, 30);
 ProjectCreator.createProject(
   "Lincoln's Path",
   `This is a description of Lincoln's Path.`,
-  ["Lincolns Path GIF.gif", "Lincolns Path Screenshot 1.png"],
-  ["Lincoln's Path GIF", "Lincoln's Path Screenshot 1"],
+  ["Lincolns Path Video.mp4", "Lincolns Path Screenshot 1.png"],
+  [null, "Lincoln's Path Screenshot 1"],
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
   `This is a description of Dark Dash.`,
-  ["Dark Dash GIF.gif"],
-  ["Dark Dash GIF"],
+  ["Dark Dash Video.mp4"],
+  [null],
   "small", 283, 30);
 
 const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');

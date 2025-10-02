@@ -156,7 +156,7 @@ main {
 }
 
 .project-small {
-  width: 600px;
+  width: 630px;
   height: 292px;
 }
 
@@ -189,7 +189,7 @@ main {
   display: flex;
   align-self: center;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .card-links a {

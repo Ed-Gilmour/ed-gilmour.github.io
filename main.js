@@ -83,7 +83,8 @@ ProjectCreator.createProject(
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
-  `This is a description of Dark Dash.`,
+  `I created and published Dark Dash as my first original title on Itch.io,
+  where I learned the full process of designing, building, and releasing a complete game.`,
   ["Dark Dash Video.mp4"],
   [null],
   ["https://youtu.be/mztDkwVrLAk?si=9alMfovqhPtuuvYL", "https://simply-artizan.itch.io/dark-dash"],

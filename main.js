@@ -4,6 +4,7 @@ class ProjectCreator
   {
     const container = document.getElementById(`${size}-projects`);
     const project = document.createElement("div");
+    const rTitle = title.replace(/'/g, "");
     project.classList.add("project");
     project.classList.add(`project-${size}`);
     project.style.backgroundColor = `hwb(${hue} ${white} 60%)`;
@@ -13,11 +14,11 @@ class ProjectCreator
     {
       if (imageTitles[i] != null)
       {
-        imagesStr += `<img src="Project Images/${title.replace(/'/g, "")}/${images[i]}" alt="${imageTitles[i]}" class="card-image"></img>`;
+        imagesStr += `<img src="Project Images/${rTitle}/${images[i]}" alt="${imageTitles[i]}" class="card-image"></img>`;
       }
       else
       {
-        imagesStr += `<video src="Project Images/${title.replace(/'/g, "")}/${images[i]}" autoplay loop muted playsinline class="card-image"></video>`;
+        imagesStr += `<video src="Project Images/${rTitle}/${images[i]}" autoplay loop muted playsinline class="card-image"></video>`;
       }
     }
 
@@ -25,8 +26,14 @@ class ProjectCreator
       <h2 class="card-header" style="background-color: hwb(${hue} ${white} 20%);">${title}</h2>
       <div class="card-body">
         <div class="project-images-${size} project-images">${imagesStr}</div>
-        <p class="project-text">${description}</p>
-      </div>
+        <div class="project-text-column">
+          <p class="project-text">${description}</p>
+          <div class="card-links">
+            <a href="https://www.linkedin.com/in/ed-gilmour" target="_blank" class="text-clickable large-text center-link link-${rTitle}" style="color: hwb(${hue} ${white} 20%);">Trailer</a>
+            |
+            <a href="https://www.linkedin.com/in/ed-gilmour" target="_blank" class="text-clickable large-text center-link link-${rTitle}" style="color: hwb(${hue} ${white} 20%);">Trailer</a>
+          </div>
+        </div>
     `;
 
     container.appendChild(project);

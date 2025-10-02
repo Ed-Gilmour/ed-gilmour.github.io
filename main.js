@@ -67,13 +67,19 @@ class ProjectCreator
 
 ProjectCreator.createProject(
   "Cosmula",
-  `This is a description of Cosmula.<br>
-  Here is a new line.`,
+  `Cosmula is a 2D space shooter released on Steam and currently in Early Access.
+  I designed and developed the entire game with support for single-player and multiplayer using
+  Unity Netcode for Game Objects, Unity Relay, and Unity Lobbies.
+  Developing Cosmula gave me deep experience in multiplayer game development
+  and the importance of building clean, maintanable, and scalable systems.`,
   ["Cosmula Video.mp4", "Cosmula Screenshot 1.png", "Cosmula Screenshot 2.png", "Cosmula Screenshot 3.png"],
   [null, "Cosmula Screenshot 1", "Cosmula Screenshot 2", "Cosmula Screenshot 3"],
   ["https://youtu.be/kvWG5NTScRY", "https://store.steampowered.com/app/2421520/Cosmula/"],
   ["Trailer", "Steam"],
-  [],
+  ["Single-player and multiplayer with up to 6 players",
+    "A variety of ships, each with unique components, stats, and playstyles",
+    "Complex bots for both single-player and multiplayer, with scalable difficulty"
+  ],
   "large", 206, 30);
 ProjectCreator.createProject(
   "Fried Panic",

@@ -174,7 +174,7 @@ main {
 
 .card-body {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   padding-right: 16px;
   gap: 16px;
 }
@@ -189,6 +189,7 @@ main {
   display: flex;
   align-self: center;
   gap: 16px;
+  margin-bottom: 16px;
 }
 
 .card-links a {

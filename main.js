@@ -41,6 +41,7 @@ class ProjectCreator
           <p class="project-text">${description}</p>
           <div class="card-links">${linksStr}</div>
         </div>
+      </div>
     `;
 
     container.appendChild(project);

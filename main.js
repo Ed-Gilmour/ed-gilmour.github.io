@@ -1,6 +1,6 @@
 class ProjectCreator
 {
-  static createProject(title, description, images, imageTitles, links, linkTitles, size, hue, white)
+  static createProject(title, description, images, imageTitles, links, linkTitles, features, size, hue, white)
   {
     const container = document.getElementById(`${size}-projects`);
     const project = document.createElement("div");
@@ -22,15 +22,29 @@ class ProjectCreator
       }
     }
 
-    let linksStr = ""
+    let linksStr = "";
     for (let i = 0; i < links.length; i++)
     {
-      let breakStr = "|"
+      let breakStr = "|";
       if (i == links.length - 1)
       {
-        breakStr = ""
+        breakStr = "";
       }
-      linksStr += `<a href="${links[i]}" target="_blank" class="text-clickable large-text center-link" style="color: hwb(${hue} ${white} 20%);">${linkTitles[i]}</a>${breakStr}`
+      linksStr += `<a href="${links[i]}" target="_blank" class="text-clickable large-text center-link" style="color: hwb(${hue} ${white} 20%);">${linkTitles[i]}</a>${breakStr}`;
+    }
+
+    let featuresStr = "";
+    if (features.length > 0)
+    {
+      featuresStr = `<div class="list-section"><p>Main features:</p><ul>`;
+    }
+    for (let i = 0; i < features.length; i++)
+    {
+      featuresStr += `<li>${features[i]}</li>`;
+    }
+    if (features.length > 0)
+    {
+      featuresStr += "</ul></div>";
     }
 
     project.innerHTML = `
@@ -38,7 +52,10 @@ class ProjectCreator
       <div class="card-body">
         <div class="project-images-${size} project-images">${imagesStr}</div>
         <div class="project-text-column">
-          <p class="project-text">${description}</p>
+          <div class="card-text-content">
+            <p class="project-text">${description}</p>
+            ${featuresStr}
+          </div>
           <div class="card-links">${linksStr}</div>
         </div>
       </div>
@@ -56,30 +73,44 @@ ProjectCreator.createProject(
   [null, "Cosmula Screenshot 1", "Cosmula Screenshot 2", "Cosmula Screenshot 3"],
   ["https://youtu.be/kvWG5NTScRY", "https://store.steampowered.com/app/2421520/Cosmula/"],
   ["Trailer", "Steam"],
+  [],
   "large", 206, 30);
 ProjectCreator.createProject(
   "Fried Panic",
-  `This is a description of Fried Panic.`,
+  `Fried Panic is my first game released on Steam, a free fast-paced action title that now has reached over 6,000 players and has very positive reviews.
+  I designed and developed the entire game and collaborated with an artist on the visuals.
+  Developing it taught me a lot about managing large projects, building satisfying and robust gameplay systems,
+  and the process of publishing a complete Steam game.`,
   ["Fried Panic Video.mp4", "Fried Panic Screenshot 1.png", "Fried Panic Screenshot 2.png", "Fried Panic Screenshot 3.png"],
   [null, "Fried Panic Screenshot 1", "Fried Panic Screenshot 2", "Fried Panic Screenshot 3"],
   ["https://youtu.be/VDynyGPl08U?si=kAmN13biqbK2nKnx", "https://store.steampowered.com/app/2116520/Fried_Panic/", "https://simply-artizan.itch.io/fried-panic"],
   ["Trailer", "Steam", "Itch.io"],
+  ["Combat system utilizing each hand separately",
+    "Endless waves of increasing difficulty",
+    "Impactful, satisfying combat",
+    "Wide variety of enemies, weapons, and abilities"],
   "large", 13, 50);
 ProjectCreator.createProject(
   "Mineral Mayhem",
-  `This is a description of Mineral Mayhem.`,
+  `Mineral Mayhem is a fast-paced tower-defense game I created with a small team for a game jam in just three days.
+  Making it taught me a lot about rapid prototyping, iterating quickly under tight deadlines, and collaborating effectively.
+  The game went on to win the jam, standing out among 61 other entries.`,
   ["Mineral Mayhem Video.mp4", "Mineral Mayhem Screenshot 1.png"],
   [null, "Mineral Mayhem Screenshot 1"],
   ["https://simply-artizan.itch.io/mineral-mayhem"],
   ["Itch.io"],
+  [],
   "medium", 50, 30);
 ProjectCreator.createProject(
   "Lincoln's Path",
-  `This is a description of Lincoln's Path.`,
+  `Lincoln's Path is a free web-based decision-making history game where players take on the role of Abraham Lincoln during the Civil War.
+  Creating it helped me learn a lot about designing interactive narratives,
+  balancing education with engaging gameplay, and collaborating in a small team.`,
   ["Lincolns Path Video.mp4", "Lincolns Path Screenshot 1.png"],
   [null, "Lincoln's Path Screenshot 1"],
   ["https://github.com/Ed-Gilmour/Lincolns-Path", "https://ed-gilmour.github.io/Lincolns-Path/"],
   ["GitHub", "Play Game"],
+  [],
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
@@ -89,6 +120,7 @@ ProjectCreator.createProject(
   [null],
   ["https://youtu.be/mztDkwVrLAk?si=9alMfovqhPtuuvYL", "https://simply-artizan.itch.io/dark-dash"],
   ["Trailer", "Itch.io"],
+  [],
   "small", 283, 30);
 
 const buttons = document.querySelectorAll('.tabs button, .footer-right button, .section-body button');

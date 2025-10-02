@@ -179,10 +179,50 @@ main {
   gap: 16px;
 }
 
+.list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-section p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.list-section ul {
+  list-style: none;
+  padding-left: 8px;
+  margin-top: 8px;
+  list-style-position: inside;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.list-section li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.list-section li::before {
+  position: relative;
+  bottom: -5px;
+  content: "•";
+  font-size: 12px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  line-height: normal;
+}
+
 .project-text {
-  flex: 1;
   text-align: left;
   word-wrap: break-word;
+}
+
+.card-text-content {
+  flex: 1;
 }
 
 .card-links {
@@ -199,8 +239,8 @@ main {
 .project-text-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex: 1;
+  min-height: 0;
 }
 
 .project-images {

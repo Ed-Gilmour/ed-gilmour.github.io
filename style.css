@@ -15,8 +15,8 @@ body {
 
 main {
   flex: 1;
-  width: 1440px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   position: relative;
 }
@@ -71,15 +71,16 @@ main {
   padding-right: 120px;
 }
 
+.section-body,
 .section-header {
   text-align: left;
-  width: 850px;
-  margin-bottom: 40px;
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
 }
 
-.section-body {
-  text-align: left;
-  width: 850px;
+.section-header {
+  margin-bottom: 40px;
 }
 
 .text-clickable {
@@ -313,6 +314,17 @@ footer {
     padding: 80px 16px;
   }
 
+  .section-header,
+  .section-body {
+    width: 100%;
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+  }
+
   .tabs {
     top: 16px;
     right: 16px;
@@ -323,6 +335,10 @@ footer {
   .tab-button {
     font-size: 16px;
     padding: 8px;
+  }
+
+  .contact-image {
+    padding-left: 16px;
   }
 
   .art-projects {
@@ -372,6 +388,14 @@ footer {
   .project-text {
     width: 100%;
     padding-left: 8px;
+  }
+
+  .project-text-column {
+    padding: 0 8px;
+  }
+
+  .list-section p {
+    margin-left: 8px;
   }
 
   footer {

@@ -161,23 +161,41 @@ main {
   height: 292px;
 }
 
-.card-header {
-  color: rgb(240, 240, 240);
-  border-radius: 14px 14px 0 0;
+.card-header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   padding: 4px;
-  margin: 0;
+  border-radius: 14px 14px 0 0;
 }
 
-.card-header h2 {
-  padding: 0;
+.card-header {
   margin: 0;
+  font-size: 20px;
+}
+
+.card-date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  margin: 0;
+  font-size: 14px;
+  color: rgb(240, 240, 240);
 }
 
 .card-body {
   display: flex;
-  align-items: stretch;
+  flex-direction: row;
   padding-right: 16px;
   gap: 16px;
+}
+
+.project-text-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
 }
 
 .list-section {
@@ -235,13 +253,6 @@ main {
 
 .card-links a {
   font-weight: bold;
-}
-
-.project-text-column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
 }
 
 .project-images {

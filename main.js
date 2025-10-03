@@ -1,6 +1,6 @@
 class ProjectCreator
 {
-  static createProject(title, description, images, imageTitles, links, linkTitles, features, size, hue, white)
+  static createProject(title, date, description, images, imageTitles, links, linkTitles, features, size, hue, white)
   {
     const container = document.getElementById(`${size}-projects`);
     const project = document.createElement("div");
@@ -48,7 +48,10 @@ class ProjectCreator
     }
 
     project.innerHTML = `
-      <h2 class="card-header" style="background-color: hwb(${hue} ${white} 20%);">${title}</h2>
+    <div class="card-header-container" style="background-color: hwb(${hue} ${white} 20%);">
+      <h2 class="card-header">${title}</h2>
+      <h3 class="card-date">${date}</h3>
+    </div>
       <div class="card-body">
         <div class="project-images-${size} project-images">${imagesStr}</div>
         <div class="project-text-column">
@@ -67,6 +70,7 @@ class ProjectCreator
 
 ProjectCreator.createProject(
   "Cosmula",
+  2025,
   `Cosmula is a 2D space shooter released on Steam and currently in Early Access.
   I designed and developed the entire game with support for single-player and multiplayer using
   Unity Netcode for Game Objects, Unity Relay, and Unity Lobbies.
@@ -83,6 +87,7 @@ ProjectCreator.createProject(
   "large", 206, 30);
 ProjectCreator.createProject(
   "Fried Panic",
+  2022,
   `Fried Panic is my first game released on Steam, a free fast-paced action title that now has reached over 6,000 players and has very positive reviews.
   I designed and developed the entire game and collaborated with an artist on the visuals.
   Developing it taught me a lot about managing large projects, building satisfying and robust gameplay systems,
@@ -98,6 +103,7 @@ ProjectCreator.createProject(
   "large", 13, 50);
 ProjectCreator.createProject(
   "Mineral Mayhem",
+  2023,
   `Mineral Mayhem is a fast-paced tower-defense game I created with a small team for a game jam in just three days.
   Making it taught me a lot about rapid prototyping, iterating quickly under tight deadlines, and collaborating effectively.
   The game went on to win the jam, standing out among 61 other entries.`,
@@ -109,6 +115,7 @@ ProjectCreator.createProject(
   "medium", 50, 30);
 ProjectCreator.createProject(
   "Lincoln's Path",
+  2025,
   `Lincoln's Path is a free web-based decision-making history game where players take on the role of Abraham Lincoln during the Civil War.
   Creating it helped me learn a lot about designing interactive narratives,
   balancing education with engaging gameplay, and collaborating in a small team.`,
@@ -120,6 +127,7 @@ ProjectCreator.createProject(
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
+  2022,
   `I created and published Dark Dash as my first original title on Itch.io,
   where I learned the full process of designing, building, and releasing a complete game.`,
   ["Dark Dash Video.mp4"],

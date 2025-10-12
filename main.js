@@ -160,3 +160,23 @@ buttons.forEach(btn => {
     top_button.classList.add("active");
   });
 });
+
+if (window.location.search.includes("tab="))
+{
+  document.body.classList.add("no-transitions");
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get("tab");
+  if (tab) {
+    const tabButton = document.querySelector(`.tab-button[data-tab="${tab}"]`);
+    if (tabButton) {
+      tabButton.click();
+    }
+  }
+});
+
+window.addEventListener("load", () => {
+  document.body.classList.remove("no-transitions");
+});

@@ -145,7 +145,7 @@ buttons.forEach(btn => {
     const target = document.getElementById(btn.dataset.tab);
     const current = document.querySelector(".tab-content.active");
 
-    if (target == current) return;
+    if (target == current && current.style.display != "none") return;
 
     current.classList.remove("active");
     current.style.display = "none";
@@ -164,6 +164,7 @@ buttons.forEach(btn => {
 window.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get("tab");
+  const about = document.getElementById("about");
 
   if (tab) {
     document.body.classList.add("no-transitions");
@@ -172,9 +173,17 @@ window.addEventListener("DOMContentLoaded", () => {
     if (tabButton) {
       tabButton.click();
     }
+    else
+    {
+      about.style.display = "block";
+    }
 
     requestAnimationFrame(() => {
       document.body.classList.remove("no-transitions");
     });
+  }
+  else
+  {
+    about.style.display = "block";
   }
 });

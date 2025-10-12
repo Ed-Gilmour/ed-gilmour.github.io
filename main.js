@@ -71,7 +71,7 @@ class ProjectCreator
 ProjectCreator.createProject(
   "Cosmula",
   2025,
-  `Cosmula is a 2D space shooter released on Steam and currently in Early Access.
+  `Cosmula is a 2D space shooter released on Steam and currently in early access.
   I designed and developed the entire game with support for single-player and multiplayer using
   Unity Netcode for Game Objects, Unity Relay, and Unity Lobbies.
   Developing Cosmula gave me deep experience in multiplayer game development
@@ -161,22 +161,20 @@ buttons.forEach(btn => {
   });
 });
 
-if (window.location.search.includes("tab="))
-{
-  document.body.classList.add("no-transitions");
-}
-
 window.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get("tab");
+
   if (tab) {
+    document.body.classList.add("no-transitions");
+
     const tabButton = document.querySelector(`.tab-button[data-tab="${tab}"]`);
     if (tabButton) {
       tabButton.click();
     }
-  }
-});
 
-window.addEventListener("load", () => {
-  document.body.classList.remove("no-transitions");
+    requestAnimationFrame(() => {
+      document.body.classList.remove("no-transitions");
+    });
+  }
 });

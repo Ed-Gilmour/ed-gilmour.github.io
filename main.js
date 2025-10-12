@@ -144,7 +144,7 @@ buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = document.getElementById(btn.dataset.tab);
     const current = document.querySelector(".tab-content.active");
-print("Current: " + current.style.display);
+console.log("Current: " + current.style.display);
     if (target == current && current.style.display != "none") return;
 
     current.classList.remove("active");
@@ -171,12 +171,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const tabButton = document.querySelector(`.tab-button[data-tab="${tab}"]`);
     if (tabButton) {
-      print("click");
+      console.log("click");
       tabButton.click();
     }
     else
     {
-      print("Set block 1");
+      console.log("Set block 1");
       about.style.display = "block";
     }
 
@@ -186,7 +186,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   else
   {
-    print("Set block 2");
+    console.log("Set block 2");
     about.style.display = "block";
   }
 });

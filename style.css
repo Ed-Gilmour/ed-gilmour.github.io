@@ -320,10 +320,6 @@ footer {
   color: rgb(240, 240, 240);
 }
 
-.no-transitions .tab-content {
-  transition: none !important;
-}
-
 @media (max-width: 1023px) {
   .section-main-box {
     padding: 80px 16px;

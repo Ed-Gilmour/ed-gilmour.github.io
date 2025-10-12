@@ -144,7 +144,7 @@ buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = document.getElementById(btn.dataset.tab);
     const current = document.querySelector(".tab-content.active");
-console.log("Current: " + current.style.display);
+
     if (target == current && current.style.display != "none") return;
 
     current.classList.remove("active");
@@ -167,26 +167,17 @@ window.addEventListener("DOMContentLoaded", () => {
   const about = document.getElementById("about");
 
   if (tab) {
-    document.body.classList.add("no-transitions");
-
     const tabButton = document.querySelector(`.tab-button[data-tab="${tab}"]`);
     if (tabButton) {
-      console.log("click");
       tabButton.click();
     }
     else
     {
-      console.log("Set block 1");
       about.style.display = "block";
     }
-
-    requestAnimationFrame(() => {
-      document.body.classList.remove("no-transitions");
-    });
   }
   else
   {
-    console.log("Set block 2");
     about.style.display = "block";
   }
 });

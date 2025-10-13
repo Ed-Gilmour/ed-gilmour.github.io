@@ -75,7 +75,7 @@ main {
 .section-header {
   text-align: left;
   width: 100%;
-  max-width: 850px;
+  max-width: 800px;
   box-sizing: border-box;
 }
 
@@ -320,7 +320,36 @@ footer {
   color: rgb(240, 240, 240);
 }
 
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.rounded-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rounded-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 @media (max-width: 1023px) {
+  .about-content {
+    flex-wrap: wrap;
+  }
+
   .section-main-box {
     padding: 80px 16px;
   }

@@ -71,14 +71,14 @@ class ProjectCreator
 ProjectCreator.createProject(
   "Cosmula",
   2025,
-  `Cosmula is a 2D space shooter released on Steam and currently in early access.
+  `Cosmula is a 2D space shooter released on Steam for early access in 2025 with the full release in 2026.
   I designed and developed the entire game with support for single-player and multiplayer using
   Unity Netcode for Game Objects, Unity Relay, and Unity Lobbies.
   Developing Cosmula gave me deep experience in multiplayer game development
   and the importance of building clean, maintainable, and scalable systems.`,
   ["Cosmula Video.mp4", "Cosmula Screenshot 1.png", "Cosmula Screenshot 2.png", "Cosmula Screenshot 3.png"],
   [null, "Cosmula Screenshot 1", "Cosmula Screenshot 2", "Cosmula Screenshot 3"],
-  ["https://youtu.be/kvWG5NTScRY", "https://store.steampowered.com/app/2421520/Cosmula/"],
+  ["https://www.youtube.com/watch?v=VEvTLdvcZys", "https://store.steampowered.com/app/2421520/Cosmula/"],
   ["Trailer", "Steam"],
   ["Single-player and multiplayer with up to 6 players",
     "A variety of ships, each with unique components, stats, and playstyles",

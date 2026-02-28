@@ -75,7 +75,7 @@ main {
 .section-header {
   text-align: left;
   width: 100%;
-  max-width: 800px;
+  max-width: none;
   box-sizing: border-box;
 }
 
@@ -121,6 +121,11 @@ main {
   width: 32px;
   height: 32px;
   margin-right: 16px;
+}
+
+.separator {
+  pointer-events: none;
+  user-select: none;
 }
 
 .art-projects {

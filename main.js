@@ -30,7 +30,7 @@ class ProjectCreator
       {
         breakStr = "";
       }
-      linksStr += `<a href="${links[i]}" target="_blank" class="text-clickable large-text center-link" style="color: hwb(${hue} ${white} 20%);">${linkTitles[i]}</a>${breakStr}`;
+      linksStr += `<a href="${links[i]}" target="_blank" class="text-clickable large-text center-link" style="color: hwb(${hue} ${white} 20%);">${linkTitles[i]}</a><span class="separator">${breakStr}</span>`;
     }
 
     let featuresStr = "";

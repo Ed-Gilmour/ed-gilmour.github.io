@@ -52,16 +52,16 @@ class ProjectCreator
       <h2 class="card-header">${title}</h2>
       <h3 class="card-date">${date}</h3>
     </div>
-      <div class="card-body">
-        <div class="project-images-${size} project-images">${imagesStr}</div>
-        <div class="project-text-column">
-          <div class="card-text-content">
-            <p class="project-text">${description}</p>
-            ${featuresStr}
-          </div>
-          <div class="card-links">${linksStr}</div>
+    <div class="card-body">
+      <div class="project-images-${size} project-images">${imagesStr}</div>
+      <div class="project-text-column">
+        <div class="card-text-content">
+          <p class="project-text">${description}</p>
+          ${featuresStr}
         </div>
+        <div class="card-links">${linksStr}</div>
       </div>
+    </div>
     `;
 
     container.appendChild(project);
@@ -117,8 +117,8 @@ ProjectCreator.createProject(
   "Lincoln's Path",
   2025,
   `Lincoln's Path is a free web-based decision-making history game where players take on the role of Abraham Lincoln during the Civil War.
-  Creating it helped me learn a lot about designing interactive narratives,
-  balancing education with engaging gameplay, and collaborating in a small team.`,
+  Creating it helped me learn a lot about balancing education with engaging gameplay, and collaborating in a small team.
+  Entry for the 2025 Congressional App Challenge.`,
   ["Lincolns Path Video.mp4", "Lincolns Path Screenshot 1.png"],
   [null, "Lincoln's Path Screenshot 1"],
   ["https://github.com/Ed-Gilmour/Lincolns-Path", "https://ed-gilmour.github.io/Lincolns-Path/"],

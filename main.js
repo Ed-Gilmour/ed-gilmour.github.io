@@ -69,8 +69,24 @@ class ProjectCreator
 }
 
 ProjectCreator.createProject(
+  "Meeple Incremental",
+  "2026",
+  `Meeple Incremental is an incremental game about rolling dice to move meeples around a board.
+  Releasing in 2026 on Steam, I'm designing and developing the entire game with the goal of having a much shorter development cycle than my previous games.
+  Developing Meeple Incremental has taught me the importance of iterating and testing quickly to create a fun and complete game.`,
+  ["Meeple Incremental Video.mp4", "Meeple Incremental Screenshot 1.png", "Meeple Incremental Screenshot 2.png", "Meeple Incremental Screenshot 3.png"],
+  [null, "Meeple Incremental Screenshot 1", "Meeple Incremental Screenshot 2", "Meeple Incremental Screenshot 3"],
+  ["https://www.youtube.com/watch?v=cBecpbEypAg", "https://store.steampowered.com/app/4353350/Meeple_Incremental/"],
+  ["Trailer", "Steam"],
+  ["Colorful, pixelated 3D visuals",
+    "A large skill tree with many unique upgrades",
+    "Unlockable minigames to play for rewards",
+    "Capsule tickets to spend on unlocking powerful collectibles"
+  ],
+  "large", 120, 30);
+ProjectCreator.createProject(
   "Cosmula",
-  2025,
+  "2022-2026",
   `Cosmula is a 2D space shooter released on Steam for early access in 2025 with the full release in 2026.
   I designed and developed the entire game with support for single-player and multiplayer using
   Unity Netcode for Game Objects, Unity Relay, and Unity Lobbies.
@@ -87,7 +103,7 @@ ProjectCreator.createProject(
   "large", 206, 30);
 ProjectCreator.createProject(
   "Fried Panic",
-  2022,
+  "2022",
   `Fried Panic is my first game released on Steam, a free fast-paced action title that now has reached over 6,000 players and has very positive reviews.
   I designed and developed the entire game and collaborated with an artist on the visuals.
   Developing it taught me a lot about managing large projects, building satisfying and robust gameplay systems,
@@ -103,7 +119,7 @@ ProjectCreator.createProject(
   "large", 13, 50);
 ProjectCreator.createProject(
   "Mineral Mayhem",
-  2023,
+  "2023",
   `Mineral Mayhem is a fast-paced tower-defense game I created with a small team for a game jam in just three days.
   Making it taught me a lot about rapid prototyping, iterating quickly under tight deadlines, and collaborating effectively.
   The game went on to win the jam, standing out among 61 other entries.`,
@@ -115,7 +131,7 @@ ProjectCreator.createProject(
   "medium", 50, 30);
 ProjectCreator.createProject(
   "Lincoln's Path",
-  2025,
+  "2025",
   `Lincoln's Path is a free web-based decision-making history game where players take on the role of Abraham Lincoln during the Civil War.
   Creating it helped me learn a lot about balancing education with engaging gameplay, and collaborating in a small team.
   Entry for the 2025 Congressional App Challenge.`,
@@ -127,7 +143,7 @@ ProjectCreator.createProject(
   "medium", 30, 50);
 ProjectCreator.createProject(
   "Dark Dash",
-  2022,
+  "2022",
   `I created and published Dark Dash as my first original title on Itch.io,
   where I learned the full process of designing, building, and releasing a complete game.`,
   ["Dark Dash Video.mp4"],

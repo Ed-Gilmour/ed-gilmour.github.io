@@ -70,9 +70,8 @@ class ProjectCreator
 
 ProjectCreator.createProject(
   "Meeple Incremental",
-  "2026",
-  `Meeple Incremental is an incremental game about rolling dice to move meeples around a board.
-  Releasing in 2026 on Steam, I'm designing and developing the entire game with the goal of having a much shorter development cycle than my previous games.
+  "2025-2026",
+  `Meeple Incremental is a short incremental game released on Steam with over 10,000 copies sold. I designed and developed the entire game with the goal of having a much shorter development cycle than my previous games.
   Developing Meeple Incremental has taught me the importance of iterating and testing quickly to create a fun and complete game.`,
   ["Meeple Incremental Video.mp4", "Meeple Incremental Screenshot 1.png", "Meeple Incremental Screenshot 2.png", "Meeple Incremental Screenshot 3.png"],
   [null, "Meeple Incremental Screenshot 1", "Meeple Incremental Screenshot 2", "Meeple Incremental Screenshot 3"],
